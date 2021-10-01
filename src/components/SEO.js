@@ -20,7 +20,7 @@ const SEO = ({ title, description, image_url }) => {
       <meta name="description" content={description || siteDesc} />
       <meta property="og:title" content={`${title} | ${siteTitle}`}/>
       <meta property="og:description" content={description}/>
-      <meta property="og:image" itemProp="image" content={image_url !== undefined ? image_url : `https://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg`}/>
+      <meta property="og:image" itemProp="image" content={image_url !== undefined ? image_url : `../assets/images/slider/slika-1.png`}/>
       <meta property="og:type" content="website"/>
       <meta property="og:url" content={"https://res-publica.netlify.app/"}/>
     </Helmet>
