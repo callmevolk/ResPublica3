@@ -14,10 +14,10 @@ const BlogPosts = ({posts=[]}) => {
           if (naslov.length >= 20) {
             naslovKratki = naslov.substring(0, 20) + '...'
           }
-          const slug = slugify(naslov, { lower:true }, {remove: /[*+~.()'"!:@]/g})
-          console.log(slug)
+          const slug = slugify(naslov, { lower:true})
+          const slug2 = slugify(slug, {remove: /[*+~.()'"!:@]/g})
           return (
-            <Link key={id} to={`/${slug}`} className="blog-box">
+            <Link key={id} to={`/${slug2}`} className="blog-box">
               <GatsbyImage
                 image={pathToImage}
                 alt={naslov}
