@@ -14,6 +14,13 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `backgrounds`,
+        path: `${__dirname}/src/assets/images/slider`
+      }
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `qbmgqmkci02u`,
