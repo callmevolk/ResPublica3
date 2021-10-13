@@ -14,14 +14,13 @@ const BlogPosts = ({posts=[]}) => {
           if (naslov.length >= 20) {
             naslovKratki = naslov.substring(0, 20) + '...'
           }
+          let naslov2 = naslov
           console.log(naslov)
           if (naslov.includes('dj')) {
-            naslov.replace('dj', 'd')
-            console.log('hello from if')
-            console.log(naslov)
+            naslov2.replace('dj', 'd')
           }
 
-          const slug = slugify(naslov, { lower:true})
+          const slug = slugify(naslov2, { lower:true})
           const slug2 = slugify(slug, {remove: /[*+~.()'"!:@]/g})
           return (
             <Link key={id} to={`/${slug2}`} className="blog-box">
