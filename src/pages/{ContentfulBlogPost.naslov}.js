@@ -35,6 +35,7 @@ export const query = graphql`
 
 const BlogPostTemplate = ({ data }) => {
   const {naslov, naslovnaSlika} = data.contentfulBlogPost
+  console.log(naslov)
   const pathToImage = getImage(naslovnaSlika)
   const options = {
     renderNode: {
