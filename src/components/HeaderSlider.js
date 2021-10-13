@@ -11,7 +11,7 @@ const HeaderSlider = () => {
     allFile(filter: {sourceInstanceName: {eq: "backgrounds"}}) {
       nodes {
         childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH, placeholder: TRACED_SVG)
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         }
         name
       }

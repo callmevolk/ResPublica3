@@ -14,14 +14,16 @@ const BlogPosts = ({posts=[]}) => {
           if (naslov.length >= 20) {
             naslovKratki = naslov.substring(0, 20) + '...'
           }
-          let naslov2 = naslov
-          console.log(naslov)
-          if (naslov.includes('dj')) {
-            naslov2.replace('dj', 'd')
+          
+          let slug, slug2
+          if (naslov.includes('đ')) {
+            let naslov2 = naslov.replace('đ', 'd')
+            slug = slugify(naslov2, { lower: true })
+            slug2 = slugify(slug, {remove:  /[*+~.()'"!:@]/g}) 
+          } else {
+            slug = slugify(naslov, { lower: true })
+            slug2 = slugify(slug, {remove:  /[*+~.()'"!:@]/g}) 
           }
-
-          const slug = slugify(naslov2, { lower:true})
-          const slug2 = slugify(slug, {remove: /[*+~.()'"!:@]/g})
           return (
             <Link key={id} to={`/${slug2}`} className="blog-box">
               <GatsbyImage

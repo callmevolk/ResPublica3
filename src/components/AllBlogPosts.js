@@ -14,7 +14,7 @@ const AllBlogPosts = () => {
             height: 220
             layout: CONSTRAINED
             width: 300
-            placeholder: TRACED_SVG
+            placeholder: BLURRED
           )
         }
       }
