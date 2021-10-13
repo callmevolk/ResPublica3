@@ -14,6 +14,26 @@ const BlogPosts = ({posts=[]}) => {
           if (naslov.length >= 20) {
             naslovKratki = naslov.substring(0, 20) + '...'
           }
+          if (naslov.includes('đ')) {
+            naslov.replace('đ', 'd')
+          }
+
+          if (naslov.includes('ž')) {
+            naslov.replace('ž', 'z')
+          }
+
+          if (naslov.includes('š')) {
+            naslov.replace('š', 's')
+          }
+
+          if (naslov.includes('č')) {
+            naslov.replace('č', 'c')
+          }
+
+          if (naslov.includes('ć')) {
+            naslov.replace('ć', 'c')
+          }
+
           const slug = slugify(naslov, { lower:true})
           const slug2 = slugify(slug, {remove: /[*+~.()'"!:@]/g})
           return (
