@@ -14,8 +14,11 @@ const BlogPosts = ({posts=[]}) => {
           if (naslov.length >= 20) {
             naslovKratki = naslov.substring(0, 20) + '...'
           }
+          console.log(naslov)
           if (naslov.includes('dj')) {
             naslov.replace('dj', 'd')
+            console.log('hello from if')
+            console.log(naslov)
           }
 
           const slug = slugify(naslov, { lower:true})
