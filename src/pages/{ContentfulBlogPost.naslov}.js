@@ -25,6 +25,7 @@ export const query = graphql`
         }
       }
       naslov
+      linkDoSlike
       naslovnaSlika {
         gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
@@ -34,7 +35,7 @@ export const query = graphql`
 `
 
 const BlogPostTemplate = ({ data }) => {
-  const {naslov, naslovnaSlika} = data.contentfulBlogPost
+  const {naslov, naslovnaSlika, linkDoSlike} = data.contentfulBlogPost
   const pathToImage = getImage(naslovnaSlika)
   const options = {
     renderNode: {
@@ -46,7 +47,7 @@ const BlogPostTemplate = ({ data }) => {
   const blogPost = data.contentfulBlogPost.tekst
   return (
     <Layout>
-      <SEO title={naslov} image_url={pathToImage.images.fallback.src} />
+      <SEO title={naslov} image_url={linkDoSlike}/>
       <main className="page">
         <div className="blog-header">
           <GatsbyImage image={pathToImage} alt="" className="blog-header-image" />
