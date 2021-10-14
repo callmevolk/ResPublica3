@@ -27,10 +27,4 @@ const SEO = ({ title, description, image_url }) => {
   )
 }
 
-SEO.defaultProps = {
-  title: "Res Publica",
-  description: "Građanski Demokratski Centar Res Publica",
-  image_url: "https://gdcrespublica.ba/static/18c1d12acf96ed4d1c1a396ec0b0941f/d41bd/slika-1.png"
-}
-
 export default SEO
