@@ -9,7 +9,7 @@ import SEO from '../components/SEO'
 const About = () => {
   return (
     <Layout>
-    <SEO title="Misija" />
+    <SEO title="Misija" description="O nama" />
       <Header
         title="Naša misija"
         description="Par riječi o nama"

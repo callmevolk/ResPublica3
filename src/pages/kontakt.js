@@ -25,7 +25,7 @@ const Contact = () => {
   const final = getImage(data.staticMap.childFile.childImageSharp)
   return (
     <Layout>
-      <SEO title="Kontakt" />
+      <SEO title="Kontakt" description="Naše kontakt informacije" />
       <Header
         title="Kontaktirajte nas"
         description="Kako nas možete pronaći"

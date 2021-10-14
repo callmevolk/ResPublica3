@@ -5,7 +5,7 @@ import SEO from '../components/SEO'
 const ErrorPage = () => {
   return (
     <Layout>
-      <SEO title="Greška" />
+      <SEO title="Greška" description="Stranica nije pronađena" />
       <main className="error-page">
         <section>
           <h1>404</h1>

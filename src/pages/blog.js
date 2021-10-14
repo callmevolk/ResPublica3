@@ -8,7 +8,7 @@ import SEO from '../components/SEO'
 const Blog = () => {
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title="Blog" description="Naše blog objave" />
       <Header
         title="Blog"
         description="Izdvojene blog objave"
