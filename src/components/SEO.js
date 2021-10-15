@@ -17,7 +17,7 @@ const SEO = ({ title, description, image_url }) => {
   return (
     <Helmet>
       <title>{`${title} | ${siteTitle}`}</title>
-      <meta name="description" content={description || siteDesc} />
+      <meta name="description" content={description || siteDesc}/>
       <meta property="og:title" content={`${title} | ${siteTitle}`}/>
       <meta property="og:description" content={description}/>
       <meta property="og:image" itemProp="image" content={image_url}/>
