@@ -25,7 +25,7 @@ const Contact = () => {
   const final = getImage(data.staticMap.childFile.childImageSharp)
   return (
     <Layout>
-      <SEO title="Kontakt" description="Naše kontakt informacije" image_url="https://gdcrespublica.ba/static/18c1d12acf96ed4d1c1a396ec0b0941f/d41bd/slika-1.png" />
+      <SEO title="Kontakt" currentUrl="https://www.gdcrespublica.ba/kontakt" description="Naše kontakt informacije" image_url="https://gdcrespublica.ba/static/18c1d12acf96ed4d1c1a396ec0b0941f/d41bd/slika-1.png" />
       <Header
         title="Kontaktirajte nas"
         description="Kako nas možete pronaći"

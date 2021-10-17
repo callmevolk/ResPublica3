@@ -5,6 +5,8 @@ import { BLOCKS } from '@contentful/rich-text-types'
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import SEO from '../components/SEO'
+import { FacebookShareButton, LinkedinShareButton, TwitterShareButton, FacebookIcon, LinkedinIcon, TwitterIcon } from 'react-share'
+import slugify from 'slugify'
 
 export const query = graphql`
   query getPost($naslov: String) {
@@ -37,6 +39,15 @@ export const query = graphql`
 const BlogPostTemplate = ({ data }) => {
   const {naslov, naslovnaSlika, linkDoSlike} = data.contentfulBlogPost
   const pathToImage = getImage(naslovnaSlika)
+  let slug, slug2
+  if (naslov.includes('đ')) {
+    let naslov2 = naslov.replace('đ', 'd')
+    slug = slugify(naslov2, { lower: true })
+    slug2 = slugify(slug, {remove:  /[*+~.()'"!:@]/g}) 
+  } else {
+    slug = slugify(naslov, { lower: true })
+    slug2 = slugify(slug, {remove:  /[*+~.()'"!:@]/g}) 
+  }
   const options = {
     renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: node => {
@@ -47,7 +58,7 @@ const BlogPostTemplate = ({ data }) => {
   const blogPost = data.contentfulBlogPost.tekst
   return (
     <Layout>
-      <SEO title={naslov} image_url={linkDoSlike}/>
+      <SEO title={naslov} currentUrl={`https://www.gdcrespublica.ba/${slug2}`} image_url={linkDoSlike}/>
       <main className="page">
         <div className="blog-header">
           <GatsbyImage image={pathToImage} alt="" className="blog-header-image" />
@@ -55,6 +66,17 @@ const BlogPostTemplate = ({ data }) => {
         </div>
         <section className="blog-page">
           {renderRichText(blogPost, options)}
+          <div className="share-buttons">
+            <FacebookShareButton url={`https://www.gdcrespublica.ba/${slug2}`}>
+              <FacebookIcon size={32} round />
+            </FacebookShareButton>
+            <TwitterShareButton url={`https://www.gdcrespublica.ba/${slug2}`}>
+              <TwitterIcon size={32} round />
+            </TwitterShareButton>
+            <LinkedinShareButton url={`https://www.gdcrespublica.ba/${slug2}`}>
+              <LinkedinIcon size={32} round />
+            </LinkedinShareButton>
+          </div>
         </section>
       </main>
     </Layout>

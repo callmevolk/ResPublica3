@@ -28,7 +28,7 @@ export default function Home() {
   const posts = data.allContentfulBlogPost.nodes
   return (
     <Layout>
-      <SEO title="Početna" image_url="https://gdcrespublica.ba/static/18c1d12acf96ed4d1c1a396ec0b0941f/d41bd/slika-1.png" />
+      <SEO title="Početna" currentUrl="https://www.gdcrespublica.ba" image_url="https://gdcrespublica.ba/static/18c1d12acf96ed4d1c1a396ec0b0941f/d41bd/slika-1.png" />
       <main>
         <HeaderSlider />
         <section className="home">

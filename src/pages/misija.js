@@ -9,7 +9,7 @@ import SEO from '../components/SEO'
 const About = () => {
   return (
     <Layout>
-    <SEO title="Misija" description="O nama" image_url="https://gdcrespublica.ba/static/18c1d12acf96ed4d1c1a396ec0b0941f/d41bd/slika-1.png" />
+    <SEO title="Misija" description="O nama" currentUrl="https://www.gdcrespublica.ba/misija/" image_url="https://gdcrespublica.ba/static/18c1d12acf96ed4d1c1a396ec0b0941f/d41bd/slika-1.png" />
       <Header
         title="Naša misija"
         description="Par riječi o nama"

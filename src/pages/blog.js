@@ -8,7 +8,7 @@ import SEO from '../components/SEO'
 const Blog = () => {
   return (
     <Layout>
-      <SEO title="Blog" description="Naše blog objave" image_url="https://gdcrespublica.ba/static/18c1d12acf96ed4d1c1a396ec0b0941f/d41bd/slika-1.png" />
+      <SEO title="Blog" description="Naše blog objave" currentUrl="https://www.gdcrespublica.ba/blog" image_url="https://gdcrespublica.ba/static/18c1d12acf96ed4d1c1a396ec0b0941f/d41bd/slika-1.png" />
       <Header
         title="Blog"
         description="Izdvojene blog objave"

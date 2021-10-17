@@ -826,3 +826,7 @@ button:hover,
 .blog-page li p {
   margin: 0 auto;
 }
+
+.share-buttons {
+  margin: 2rem 0;
+}
