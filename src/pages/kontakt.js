@@ -42,10 +42,10 @@ const Contact = () => {
         <section className="contact-page">
           <article className="contact-text">
           <h2>Kontaktirajte nas</h2>
-            <p><FontAwesomeIcon icon={faGoogle} className="contact-icon"/>nikola_bogicevic@hotmail.com</p>
+            <p><FontAwesomeIcon icon={faGoogle} className="contact-icon"/>gdcrespublica21@gmail.com</p>
             <p><FontAwesomeIcon icon={faPhone} className="contact-icon"/>+38765383412</p>
             <p><FontAwesomeIcon icon={faMapMarkerAlt} className="contact-icon"/>Steve Stevanovića bb Prnjavor</p>
-            <p><FontAwesomeIcon icon={faFacebook} className="contact-icon"/>facebook.com/respublicaanalytics</p>
+            <p><FontAwesomeIcon icon={faFacebook} className="contact-icon"/><a href="https://www.facebook.com/respublicaanalytics">facebook.com/respublicaanalytics</a></p>
           </article>
           <GatsbyImage
             image={final}

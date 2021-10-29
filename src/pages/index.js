@@ -36,7 +36,7 @@ export default function Home() {
           <p>Građanski demokratski centar Res Publica je nevladina organizacija ili tačnije registrovano udruženje građana čiji su programski ciljevi sledeći:  <button className="btn"><Link to="/misija">Saznaj više</Link></button></p>
         </section>
         <section className="featured-blogs home">
-          <h5>Izdvojena blog objava</h5>
+          <h5>Izdvojene Blog Objave</h5>
           <BlogPosts posts={posts} />
         </section>
       </main>

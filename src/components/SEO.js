@@ -23,6 +23,7 @@ const SEO = ({ title, description, image_url, currentUrl }) => {
       <meta property="og:image" itemProp="image" content={image_url}/>
       <meta property="og:type" content="website"/>
       <meta property="og:url" content={currentUrl}/>
+      <meta property="og:locale" content="en" />
     </Helmet>
   )
 }
