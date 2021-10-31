@@ -842,7 +842,7 @@ button:hover,
 }
 
 .share-buttons button svg {
-  margin-top: 0;
+  margin: 0 auto;
 }
 
 .share-buttons {
