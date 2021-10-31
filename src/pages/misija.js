@@ -17,7 +17,7 @@ const About = () => {
         <StaticImage 
           src="../assets/images/misija.jpg"
           alt="O nama, naša misija"
-          className="hero-image"
+          className="hero-image-small"
           layout="fullWidth"
           placeholder="blurred"
         />

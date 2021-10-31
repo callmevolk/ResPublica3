@@ -11,8 +11,8 @@ const BlogPosts = ({posts=[]}) => {
           const { id, naslov, datum, naslovnaSlika} = post
           const pathToImage = getImage(naslovnaSlika)
           let naslovKratki = naslov
-          if (naslov.length >= 20) {
-            naslovKratki = naslov.substring(0, 20) + '...'
+          if (naslov.length >= 57) {
+            naslovKratki = naslov.substring(0, 57) + '...'
           }
           
           let slug, slug2

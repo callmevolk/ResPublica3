@@ -16,7 +16,7 @@ const Blog = () => {
         <StaticImage 
           src="../assets/images/blog.jpg"
           alt="Blog objave"
-          className="hero-image"
+          className="hero-image-small"
           layout="fullWidth"
           placeholder="blurred"
         />

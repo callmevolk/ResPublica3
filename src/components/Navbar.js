@@ -19,6 +19,7 @@ const Navbar = () => {
           <Link to="/" className="nav-link" activeClassName="active-link" onClick={() => setShow(false)}>Početna</Link>
           <Link to="/misija" className="nav-link" activeClassName="active-link" onClick={() => setShow(false)}>Misija</Link>
           <Link to="/blog" className="nav-link" activeClassName="active-link" onClick={() => setShow(false)}>Blog</Link>
+          <a href="https://www.patreon.com/ResPublicaGDC" target="_blank" rel="noreferrer" className="nav-link" onClick={() => setShow(false)}>Patreon</a>
           <div className="nav-link contact-link">
             <Link to="/kontakt" className="btn" onClick={() => setShow(false)}>Kontaktirajte nas &rarr;</Link>
           </div>

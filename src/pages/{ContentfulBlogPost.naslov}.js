@@ -27,7 +27,6 @@ export const query = graphql`
         }
       }
       naslov
-      linkDoSlike
       naslovnaSlika {
         gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
@@ -37,8 +36,9 @@ export const query = graphql`
 `
 
 const BlogPostTemplate = ({ data }) => {
-  const {naslov, naslovnaSlika, linkDoSlike} = data.contentfulBlogPost
+  const {naslov, naslovnaSlika} = data.contentfulBlogPost
   const pathToImage = getImage(naslovnaSlika)
+  const imageLink = pathToImage.images.fallback.src
   let slug, slug2
   if (naslov.includes('đ')) {
     let naslov2 = naslov.replace('đ', 'd')
@@ -58,7 +58,7 @@ const BlogPostTemplate = ({ data }) => {
   const blogPost = data.contentfulBlogPost.tekst
   return (
     <Layout>
-      <SEO title={naslov} currentUrl={`https://www.gdcrespublica.ba/${slug2}`} image_url={linkDoSlike}/>
+      <SEO title={naslov} currentUrl={`https://www.gdcrespublica.ba/${slug2}`} image_url={imageLink}/>
       <main className="page">
         <div className="blog-header">
           <GatsbyImage image={pathToImage} alt="" className="blog-header-image" />

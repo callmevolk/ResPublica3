@@ -33,7 +33,7 @@ const Contact = () => {
         <StaticImage 
           src="../assets/images/kontaktirajte.jpg"
           alt="Kontakt informacije"
-          className="hero-image"
+          className="hero-image-small"
           layout="fullWidth"
           placeholder="blurred"
         />
