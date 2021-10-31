@@ -742,6 +742,10 @@ button:hover,
   margin: 2rem auto;
 }
 
+.blog-page {
+  padding: 3px;
+}
+
 .blog-header {
   padding-top: 1.2rem;
 }
@@ -777,6 +781,7 @@ button:hover,
   padding-top: 2rem;
   box-shadow: var(--shadow-4);
   border-radius: var(--borderRadius);
+  padding: 2px;
 }
 
 .blog-page img {
@@ -834,6 +839,10 @@ button:hover,
 .share-buttons button {
   display: inline-block;
   margin: .2rem;
+}
+
+.share-buttons button svg {
+  margin-top: 0;
 }
 
 .share-buttons {
