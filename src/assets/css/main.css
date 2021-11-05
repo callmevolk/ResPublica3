@@ -743,7 +743,7 @@ button:hover,
 }
 
 .blog-page {
-  padding: 3px;
+  padding: 10px;
 }
 
 .blog-header {
@@ -799,7 +799,7 @@ button:hover,
 }
 
 .blog-page blockquote {
-  margin: 0 auto;
+  margin: 1rem auto;
   font-size: 1.3rem;
   text-align: center;
   font-style: italic;
@@ -847,4 +847,9 @@ button:hover,
 
 .share-buttons {
   text-align: center;
+}
+
+.blog-page h1, .blog-page h2, .blog-page h3, .blog-page h4, .blog-page h5, .blog-page h6 {
+  text-align: center;
+  margin-top: 3.2rem;
 }
