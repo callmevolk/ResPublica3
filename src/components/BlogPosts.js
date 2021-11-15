@@ -8,7 +8,7 @@ const BlogPosts = ({posts=[]}) => {
     <div className="blog-posts">
       {
         posts.map(post => {
-          const { id, naslov, datum, naslovnaSlika} = post
+          const { id, naslov, datum, naslovnaSlika, rubrika, autor} = post
           const pathToImage = getImage(naslovnaSlika)
           let naslovKratki = naslov
           if (naslov.length >= 57) {
@@ -31,8 +31,15 @@ const BlogPosts = ({posts=[]}) => {
                 alt={naslov}
                 className="blog-img"
               />
-              <h5 className="blog-title">{naslovKratki}</h5>
-              <p className="datum">{datum}</p>
+              <div className="blog-text-container">
+                <span className="blog-line"></span>
+                <div className="blog-padding">
+                  <p className="blog-font">{rubrika}</p>
+                  <p className="datum blog-font">{datum}</p>
+                  <h5 className="blog-title">{naslov}</h5>
+                  <h6 className="blog-author">{autor}</h6>
+                </div>
+              </div>
             </Link>
           )
         })

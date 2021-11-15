@@ -55,8 +55,8 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* typography */
   --defaultFontSize: 87.5%;
-  --headingFont: "Merriweather", sans-serif;
-  --bodyFont: "Open Sans", serif;
+  --headingFont: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --bodyFont: "Tiempos Text", Georgia, Times, serif;
   --smallText: 0.8em;
   --extraSmallText: 0.7em;
   /* rest */
@@ -102,13 +102,14 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   margin: 0;
   margin-bottom: 1.38rem;
   font-family: var(--headingFont);
   font-weight: 400;
   line-height: 1.3;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   letter-spacing: var(--letterSpacing);
 }
 
@@ -550,6 +551,8 @@ button:hover,
   padding-bottom: 3rem;
 }
 
+
+
 .tim {
   margin-top: 2rem;
 }
@@ -712,28 +715,196 @@ button:hover,
 
 .blog-title {
   font-size: .8rem;
-  font-weight: bold;
-  margin-top: .2rem;
-  margin-left: .2rem;
-  margin-bottom: 0;
-  width: 290px;
+  width: 100%;
 }
 
 .datum {
-  margin-top: .4rem;
   font-size: .7rem;
-  margin-bottom: .2rem;
   text-align: right;
-  padding-right: 1rem;
   font-style: italic;
 }
 
 .featured-blogs {
-  margin-top: 5.5rem;
+  margin: 3rem 0;
+  padding-top: 3.6rem;
+  width: 100%;
+  max-width: 100%;
+  background-color: white;
+}
+.featured-blogs h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 300;
 }
 
 .featured-blogs .blog-posts {
-  margin: 0 auto;
+  /* justify-content: flex-start; */
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.featured-blogs .blog-box {
+  width: 100%;
+  margin: 0;
+  margin-top: 10px;
+  box-shadow: none;
+  flex: 1;
+}
+
+.featured-blogs .blog-img {
+  width: 40%;
+  height: 305px;
+  display: inline-block;
+}
+.featured-blogs img {
+  z-index: 0;
+}
+
+.featured-blogs .blog-box .blog-text-container {
+  width: 60%;
+  height: 305px;
+  display: inline-block;
+  z-index: 1;
+  background-color: white;
+  transition: transform .2s ease-in;
+}
+
+.blog-padding {
+  padding: 40px 100px;
+  padding-bottom: 0;
+  color: var(--primary-1100);
+}
+.blog-font {
+  font-family: "Atlas Typewriter", "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: .2px;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 601px) {
+  .featured-blogs .blog-box:hover .blog-text-container {
+    transform: translateX(-20px);
+    transition: transform .2s ease-in;
+  }
+}
+
+.featured-blogs .blog-title {
+  font-size: 1.7rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.featured-blogs .blog-line {
+  display: block;
+  content: "";
+  background-color: var(--primary-900);
+  height: 1px;
+  width: 98%;
+  margin-left: 2%;
+}
+
+.featured-blogs .blog-author {
+  font-size: 1.2rem;
+}
+
+.blog-padding {
+  position: relative;
+}
+
+.datum {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+.blog-posts-all .blog-box {
+  width: 46%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.blog-posts-all .blog-posts {
+  align-items: flex-start;
+}
+
+.blog-posts-all .blog-img {
+  height: 300px;
+}
+
+.blog-posts-all img {
+  height: 300px;
+}
+
+.blog-posts-all .blog-padding {
+  padding: 15px;
+}
+
+.blog-posts-all .blog-title {
+  font-size: 1.5rem;
+}
+
+.blog-posts-all .datum {
+  top: 85%;
+}
+
+.blog-posts-all .blog-author {
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 930px) {
+  .blog-padding {
+    padding: 30px 10px;
+  }
+
+  .datum {
+    top: 30px;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .datum {
+    top: 85%;
+    right: 20px;
+  }
+  .featured-blogs .blog-box {
+    width: 98%;
+    margin: 0 auto;
+  }
+  
+  .featured-blogs .blog-img {
+    width: 100%;
+    height: 250px;
+  }
+  .featured-blogs img {
+    z-index: 0;
+  }
+  
+  .featured-blogs .blog-box .blog-text-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-blogs .blog-box {
+    box-shadow: var(--shadow-4);
+    margin-bottom: 10px;
+  }
+
+  .featured-blogs .blog-padding {
+    padding: 15px 10px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .blog-posts-all .blog-box {
+    width: 98%;
+  }
+
+  .blog-posts-all .datum {
+    top: 85%;
+  }
 }
 
 /* blog */
@@ -765,6 +936,11 @@ button:hover,
 
 .blog-header {
   margin-bottom: 2rem;
+}
+
+.blog-rubrika {
+  text-align: right;
+  font-style: italic;
 }
 
 @media screen and (min-width: 992px) {

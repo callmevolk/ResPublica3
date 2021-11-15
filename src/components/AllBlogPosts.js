@@ -9,11 +9,10 @@ const AllBlogPosts = () => {
         id
         naslov
         datum
+        rubrika
         naslovnaSlika {
           gatsbyImageData(
-            height: 220
             layout: CONSTRAINED
-            width: 300
             placeholder: BLURRED
           )
         }
@@ -23,7 +22,7 @@ const AllBlogPosts = () => {
   `)
   const blogPosts = data.allContentfulBlogPost.nodes
   return (
-    <div>
+    <div className="blog-posts-all">
       <BlogPosts posts={blogPosts} />
     </div>
   )

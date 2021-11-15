@@ -31,12 +31,14 @@ export const query = graphql`
         gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
       datum
+      autor
+      rubrika
     }
   }
 `
 
 const BlogPostTemplate = ({ data }) => {
-  const {naslov, naslovnaSlika} = data.contentfulBlogPost
+  const {naslov, naslovnaSlika, autor, rubrika} = data.contentfulBlogPost
   const pathToImage = getImage(naslovnaSlika)
   const imageLink = pathToImage.images.fallback.src
   let slug, slug2
@@ -65,7 +67,9 @@ const BlogPostTemplate = ({ data }) => {
           <h2>{naslov}</h2>
         </div>
         <section className="blog-page">
+          <p className="blog-rubrika">Rubrika: {rubrika}</p>
           {renderRichText(blogPost, options)}
+          <p>{autor}</p>
           <div className="share-buttons">
             <FacebookShareButton url={`https://www.gdcrespublica.ba/${slug2}`}>
               <FacebookIcon size={32} round />

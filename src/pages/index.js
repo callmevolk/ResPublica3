@@ -7,23 +7,23 @@ import SEO from '../components/SEO'
 
 export default function Home() {
   const data = useStaticQuery(graphql`
-    {
-      allContentfulBlogPost(filter: {featured: {eq: true}}) {
-        nodes {
-          id
-          datum
-          naslov
-          naslovnaSlika {
-            gatsbyImageData(
-              height: 220
-              layout: CONSTRAINED
-              placeholder: BLURRED
-              width: 300
-            )
-          }
+  {
+    allContentfulBlogPost(filter: {featured: {eq: true}}) {
+      nodes {
+        id
+        datum
+        naslov
+        naslovnaSlika {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: BLURRED
+          )
         }
+        rubrika
+        autor
       }
     }
+  }
   `)
   const posts = data.allContentfulBlogPost.nodes
   return (
