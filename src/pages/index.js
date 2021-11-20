@@ -8,7 +8,7 @@ import SEO from '../components/SEO'
 export default function Home() {
   const data = useStaticQuery(graphql`
   {
-    allContentfulBlogPost(filter: {featured: {eq: true}}) {
+    allContentfulBlogPost(filter: {featured: {eq: true}}, sort:{fields: datum, order: DESC}) {
       nodes {
         id
         datum
